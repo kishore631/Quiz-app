@@ -1,0 +1,135 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 🔥 LOGO IMAGE */
+.logo img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ================= LINKS ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* NAV ITEMS */
+.nav-links span {
+  cursor: pointer;
+  color: #4a6cf7;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.nav-links span:hover {
+  color: #1d4ed8;
+}
+
+/* ================= USER ================= */
+.user-info {
+  background: #eef2ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================= LOGOUT ================= */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* SHOW MENU ICON */
+  .hamburger {
+    display: block;
+  }
+
+  /* HIDE DESKTOP LINKS INITIALLY */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 240px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    /* SLIDE ANIMATION */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  /* OPEN MENU */
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  /* FULL WIDTH ITEMS */
+  .nav-links span,
+  .logout-btn,
+  .user-info {
+    width: 100%;
+  }
+
+  .logout-btn {
+    text-align: center;
+  }
+
+  /* LOGO SMALLER */
+  .logo img {
+    height: 60px;
+  }
+}

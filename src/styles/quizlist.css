@@ -1,0 +1,143 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding-top: 80px; /* navbar fix */
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links span {
+  margin-left: 30px;
+  cursor: pointer;
+  color: #4a6cf7;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: #1d4ed8;
+}
+
+/* MAIN CONTAINER */
+.quizlist-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.quizlist-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #1f2937;
+}
+
+/* GRID */
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+  justify-content: center;
+  gap: 50px;
+}
+
+/* CARD (BIGGER + PREMIUM) */
+.quiz-card {
+  background: white;
+  padding: 45px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 380px;
+  margin: auto;
+  border: 1px solid #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.quiz-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.quiz-card-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.quiz-card h3 {
+  font-size: 24px;
+  margin: 12px 0;
+  color: #111827;
+}
+
+/* TEXT */
+.quiz-card p {
+  font-size: 17px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.quiz-card button {
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(135deg, #4a6cf7, #3b5bdb);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quiz-card button:hover {
+  transform: scale(1.08);
+  opacity: 0.95;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .quizlist-title {
+    font-size: 28px;
+  }
+
+  .quiz-card {
+    padding: 35px 20px;
+  }
+}

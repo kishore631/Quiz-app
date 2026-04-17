@@ -80,9 +80,6 @@ JWT_SECRET=your_secret_key
 Frontend: Vercel
 Backend: Render
 Database: MongoDB Atlas
-📸 Screenshots
-
-(Add screenshots here later)
 
 👨‍💻 Author
 
